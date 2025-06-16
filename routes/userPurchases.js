@@ -14,7 +14,7 @@ router.get('/purchases', async (req, res) => {
     if (email) query['customer.email'] = email;
 
     const purchases = await Purchase.find(query)
-      .populate('book', 'title author shortDescription price ')
+      .populate('book', 'title author shortDescription price totalSales')
       .sort('-purchaseDate');
 
     res.json(purchases);
