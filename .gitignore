@@ -1,0 +1,17 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables file
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Optional npm cache folder
+.npm
+
+# OS generated files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Purchase Confirmation
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+  
+  body
+    .confirmation-container
+      .confirmation-header
+        h1 Thank You for Your Purchase!
+        p Your order has been successfully processed.
+
+      .confirmation-details
+        .confirmation-item
+          h3 Order Details
+          p
+            strong Order ID: 
+            span#orderId
+          p
+            strong Order Date: 
+            span#orderDate
+          p
+            strong Delivery Until: 
+            span#deliveryDate
+
+        .confirmation-item
+          h3 Customer Information
+          p
+            strong Name: 
+            span#customerName
+          p
+            strong Email: 
+            span#customerEmail
+
+        .confirmation-item
+          h3 Book Details
+          p
+            strong Book: 
+            span#bookName
+          p
+            strong Quantity: 
+            span#bookQuantity
+          p
+            strong Unit Price: 
+            span#unitPrice
+
+        .confirmation-total
+          h3 Total Amount: 
+            span#totalAmount
+
+      a.continue-shopping(href="/") Continue Shopping
+
+    script(src="/javascripts/confirmation.js")

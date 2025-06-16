@@ -1,0 +1,59 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Admin Panel - Online Book Store
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+
+  body
+
+    .header
+      .logo Books' Secret
+      .auth-buttons        
+        button#indexButton Home
+        button#logoutButton Logout
+
+    h1 Admin Panel
+
+    .admin-container
+      //- Add New Item Form
+      .add-item-form
+        h2 Add New Book
+
+        form#addItemForm
+          input#title(type="text", name="title", placeholder="Book Title", required)
+          input#author(type="text", name="author", placeholder="Author", required)
+          input#price(type="number", name="price", step="0.01", placeholder="Price", required)
+
+          //- Image upload section
+          .image-upload
+            input#imageFile(type="file", name="imageFile", accept="image/*")
+            img#previewImage(src="#", alt="Preview", style="display: none; max-width: 200px; margin: 10px 0;")
+
+          textarea#shortDescription(name="shortDescription", placeholder="Brief Description", required)
+          textarea#fullDescription(name="fullDescription", placeholder="Full Description", required)
+          input(type="submit", value="Add Book")
+
+      //- Existing Items Display
+      .items-container
+        h2 Existing Books
+        #itemsList
+
+      //- Purchases Section
+      .purchases-container
+        h2 Purchase History
+
+        .filters
+          select#statusFilter
+            option(value="all") All Statuses
+            option(value="pending") Pending
+            option(value="completed") Completed
+            option(value="cancelled") Cancelled
+
+          input#searchEmail(type="text", placeholder="Search by email...")
+          button#refreshPurchases Refresh
+
+        #purchasesList
+
+    script(src="/javascripts/admin.js")

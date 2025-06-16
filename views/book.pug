@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Book Details
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+  body
+
+    .header
+      .logo Books' Secret     
+      .auth-buttons        
+        button#indexButton Home 
+
+    .container
+      #book-info
+        img#bookImage(src="", alt="Book Image")
+        .book-details
+        
+  h2 Purchase Form
+      
+  form#purchaseForm(data-book-id="" data-book-price="")
+
+    .form-group
+      label(for="name") Full Name:
+      input#name(type="text", name="name", required)
+    .form-group
+      label(for="email") Email:
+      input#email(type="email", name="email", required)
+    .form-group
+      label(for="quantity") Quantity:
+      input#quantity(type="number", name="quantity", min="1", value="1", required)
+    .form-group
+      label Total Amount:
+      span#totalAmount $0.00
+    input(type="submit", value="Purchase Now")
+
+  #reviewsContainer
+        //- Existing reviews will be displayed here
+  h2 Submit Your Review
+  form#reviewForm(onsubmit="event.preventDefault(); return false;")
+    label(for="reviewerName") Your Name:
+    br
+    input#reviewerName(type="text", name="reviewerName", required)
+    br
+    label(for="reviewText") Your Review:
+    br
+    textarea#reviewText(name="review", required)
+    br
+    input(type="submit", value="Submit Review")
+
+  script(src="/javascripts/book.js")

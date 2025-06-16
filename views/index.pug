@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Books' Secrets
+    link(rel="stylesheet" href="/stylesheets/styles.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap")
+
+  body
+
+    .header
+      .logo Books' Secret
+      .auth-buttons
+        button#loginButton Login
+        button#registerButton Register
+        button#seePurchasesButton See My Purchases
+        button#adminButton Admin Pannel
+        button#logoutButton Logout
+
+    section.welcome-banner
+  p.welcome-slogan
+    | Whispers of stories, secrets untold
+    br
+    | Within these pages, worlds unfold...
+
+    //- Container for dynamic book items
+    .items-container#booksContainer
+      //- Books will be dynamically added here
+
+    script(src="javascripts/index.js")
