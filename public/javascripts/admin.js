@@ -3,11 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const indexButton = document.getElementById("indexButton");
     const logoutButton = document.getElementById("logoutButton");
 
-    const statusColors = {
-    pending: 'orange',
-    completed: 'green',
-    cancelled: 'red'
-    };
 
     if (indexButton) {
         indexButton.style.display = 'inline-block';
@@ -38,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 reader.readAsDataURL(file);
             } else {
                 alert('Please select an image file');
-                previewImage.src = `/admin/books/${item._id}/image`; // Your route to serve image binary
+                previewImage.src = `/admin/books/${item._id}/image`; 
                 previewImage.style.display = 'block';
 
             }
@@ -321,5 +316,11 @@ document.addEventListener("DOMContentLoaded", function () {
         alert('Error loading purchases. Please try again.');
     }
 }
+
+const statusColors = {
+pending: 'orange',
+completed: 'green',
+cancelled: 'red'
+};
 
 
